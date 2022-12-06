@@ -3,3 +3,12 @@
     margin: 0;
     box-sizing: border-box;
   }
+  body{
+    background-color: lightskyblue;
+}
+.container{
+    width: 720px;
+    height: 720px;
+    margin: 3rem auto;
+    background-color: white;
+  }
