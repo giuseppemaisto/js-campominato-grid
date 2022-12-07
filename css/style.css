@@ -6,9 +6,21 @@
   body{
     background-color: lightskyblue;
 }
+.container-header{
+  width: 95%;
+  margin: 0 auto;
+}
+button{
+  padding: 5px 10px;
+  margin-top: 20px;
+  background-color: rgb(64, 64, 235);
+  color: white;
+  border-radius: 10px;
+  border: none;
+}
 .container{
-    width: 720px;
-    height: 720px;
+    width: 900px;
+    height: 900px;
     margin: 3rem auto;
     background-color: white;
   }

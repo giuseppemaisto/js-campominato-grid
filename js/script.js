@@ -1,23 +1,21 @@
 //definisco funzione per la griglia
-function createSquare(number){
-    const squareElement = document.createElement('div');
-    squareElement.classList.add('square');
-    squareElement.innerText = number;
-    return squareElement;
+function generateGameGrid (){
+
+document.querySelector('.grid').innerHTML = '';
+
+for(let i = 0; i < 100; i++){
+    const cell = document.createElement('div');
+    cell.classList.add('square');
+    cell.innerText = i + 1;
+    cell.addEventListener('click', function(){
+        this.classList.toggle('clicked');
+        console.log(this.innerText);
+    })
+    document.querySelector('.grid').appendChild(cell);
 }
 
+}
 
-let button_genera = document.getElementById('genera')
-button_genera.addEventListener('click', function(){
-
-    let grid = document.getElementById('grid')
-    for(let i = 1; i<=100;i++){
-        const currentSquare = createSquare(i);
-        grid.appendChild(currentSquare);
-
-        currentSquare.addEventListener('click', function(){
-            this.classList.add('clicked')
-            console.log(this.innerText)
-        })
-    }
+document.getElementById('genera').addEventListener('click', function(){
+    generateGameGrid();
 })
